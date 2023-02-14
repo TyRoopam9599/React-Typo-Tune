@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import About from './components/About';
+import Navbar from './components/Navbar';
+import TextInput from './components/TextInput';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-function App() {
+const App = () => {
+
+  const [mode, setMode] = useState('dark');
+  if (mode === 'dark') {
+    document.body.style.backgroundColor = '#455A64';
+  }
+
+  const toggleMode = () => {
+    if (mode === 'light') {
+      setMode('dark')
+      document.body.style.backgroundColor = '#455A64'
+    }
+    else {
+      setMode('light')
+      document.body.style.backgroundColor = 'white'
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Router>
+      <div>
+        <Navbar title='TypoTune' mode={mode} toggleMode={toggleMode} />
+        <Routes>
+          <Route exact path='/about' element={ <About mode={mode} toggleMode={toggleMode} />} />          
+          <Route exact path="/" element={<TextInput heading="Try TypoTune - Word Counter, Character Counter, Lowercase to Uppercase, Uppercase to Lowercase, Remove Punctuation, Remove Extra Space, Replace Keywords" mode={mode} toggleMode={toggleMode} />}/>
+        </Routes>
+      </div>
+    </Router>
+
   );
 }
 
