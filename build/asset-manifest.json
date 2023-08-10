@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/React-Typo-Tune/static/css/main.31d6cfe0.css",
+    "main.js": "/React-Typo-Tune/static/js/main.7d4522f0.js",
+    "static/js/787.f9cd6bff.chunk.js": "/React-Typo-Tune/static/js/787.f9cd6bff.chunk.js",
+    "index.html": "/React-Typo-Tune/index.html",
+    "main.7d4522f0.js.map": "/React-Typo-Tune/static/js/main.7d4522f0.js.map",
+    "787.f9cd6bff.chunk.js.map": "/React-Typo-Tune/static/js/787.f9cd6bff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.7d4522f0.js"
+  ]
+}
