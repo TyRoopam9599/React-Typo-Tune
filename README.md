@@ -1,5 +1,5 @@
 # Typo Tune
-Typo Tune is a simple text manipulation tool built using ReactJS. It allows users to convert text to uppercase, 
+Typo Tune is a text manipulation tool built using ReactJS. It allows users to convert text to uppercase, 
 lowercase, remove extra space, replace keywords, and provide a text summary. It also offers both light and dark 
 theme options.
 
